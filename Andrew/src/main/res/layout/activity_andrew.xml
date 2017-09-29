@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.andrewassign1.AndrewActivity">
+
+    <ImageButton
+        android:id="@+id/wingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="205dp"
+        android:minWidth="205dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/wings" />
+
+    <ImageButton
+        android:id="@+id/pizzaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="205dp"
+        android:minWidth="205dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toRightOf="@id/wingButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/pizza" />
+
+    <ImageButton
+        android:id="@+id/drinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:minHeight="205dp"
+        android:minWidth="205dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="@id/wingButton"
+        app:layout_constraintTop_toBottomOf="@id/wingButton"
+        app:srcCompat="@mipmap/drinks" />
+
+    <ImageButton
+        android:id="@+id/specailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="205dp"
+        android:minWidth="205dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toRightOf="@id/drinkButton"
+        app:layout_constraintTop_toTopOf="@id/drinkButton"
+        app:srcCompat="@mipmap/special" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
