@@ -33,4 +33,9 @@ public class Item implements Serializable{
     {
         return this.itemName;
     }
+
+    public double getCost()
+    {
+        return this.price;
+    }
 }

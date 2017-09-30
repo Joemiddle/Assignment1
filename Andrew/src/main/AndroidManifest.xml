@@ -12,7 +12,6 @@
         <activity
             android:name=".AndrewActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CustomActivity" />
-        <activity android:name=".OrderActivity"></activity>
+        <activity android:name=".OrderActivity" />
+        <activity android:name=".CheckoutActivity"></activity>
     </application>
 
 </manifest>
