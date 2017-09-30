@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="controlNormal">#6495ED</color>
+    <color name="controlActivated">#B0E0E6</color>
+    <color name="menucolor">#F00A0F</color>
+    <color name="background">#A0FF0C</color>
 </resources>

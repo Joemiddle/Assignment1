@@ -1,58 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.andrewassign1.AndrewActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@color/background">
 
-    <ImageButton
-        android:id="@+id/wingButton"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="205dp"
-        android:minWidth="205dp"
-        android:scaleType="fitXY"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/wings" />
+        android:src="@mipmap/gino"
+        android:layout_gravity="center"
+        />
+    </FrameLayout>
+    <!--Regular Pizza-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/pizzaButton"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="205dp"
-        android:minWidth="205dp"
-        android:scaleType="fitXY"
-        app:layout_constraintLeft_toRightOf="@id/wingButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/pizza" />
+        android:text="@string/regular"
+        android:textColor="@color/menucolor"/>
 
-    <ImageButton
-        android:id="@+id/drinkButton"
+    <Button
+        android:id="@+id/regularButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:minHeight="205dp"
-        android:minWidth="205dp"
-        android:scaleType="fitXY"
-        app:layout_constraintLeft_toLeftOf="@id/wingButton"
-        app:layout_constraintTop_toBottomOf="@id/wingButton"
-        app:srcCompat="@mipmap/drinks" />
+        android:text="@string/order"
+        />
 
-    <ImageButton
-        android:id="@+id/specailButton"
+    </LinearLayout>
+
+    <!--Deluxe Pizza-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="205dp"
-        android:minWidth="205dp"
-        android:scaleType="fitXY"
-        app:layout_constraintLeft_toRightOf="@id/drinkButton"
-        app:layout_constraintTop_toTopOf="@id/drinkButton"
-        app:srcCompat="@mipmap/special" />
+        android:text="@string/Deluxe"
+        android:textColor="@color/menucolor"/>
+
+    <Button
+        android:id="@+id/deluxButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+
+        />
+
+    </LinearLayout>
+
+    <!--Wings-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Wings"
+        android:textColor="@color/menucolor"/>
+
+    <Button
+        android:id="@+id/wingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        />
+    </LinearLayout>
+
+    <!--Specials-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deal"
+        android:textColor="@color/menucolor"/>
+
+    <Button
+        android:id="@+id/specialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        />
+    </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+    <!--Drinks-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drinks"
+            android:textColor="@color/menucolor"/>
 
+        <Button
+            android:id="@+id/drinksButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            />
+    </LinearLayout>
 
+    <Button
+        android:id="@+id/final_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finalize_order"/>
+
+</LinearLayout>
 
 

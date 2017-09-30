@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">AndrewAssign1</string>
+    <string name="order">Order</string>
+    <string name="regular">Custom Pizza</string>
+    <string name="Deluxe">Deluxe Pizza</string>
+    <string name="Wings">Wings 2lbs</string>
+    <string name="deal">Special Pizza</string>
+    <string name="drinks">Drinks</string>
+    <string name="home">Home</string>
+    <string name="small">Small $9.99</string>
+    <string name="medium">Medium $11.99</string>
+    <string name="large">Large $13.99</string>
+    <string name="size">Size</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="sausage">Sausage</string>
+    <string name="extra_cheese">Extra Cheese</string>
+    <string name="green_olives">Green olives</string>
+    <string name="green_peppers">Green Peppers</string>
+    <string name="mushrooms">Mushrooms</string>
+    <string name="topping2">Topping 2</string>
+    <string name="topping1">Topping 1</string>
+    <string name="nothing">Nothing</string>
+    <string name="ordered">ordered</string>
+    <string name="black_olives">black olives</string>
+    <string name="coke">Coke~cola</string>
+    <string name="anchovie">Anchovies</string>
+    <string name="error_item">Too many items</string>
+    <string name="finalize_order">View order</string>
+    <string name="pizza">Pizza</string>
+    <string name="menu">Menu</string>
+    <string name="name">Andrew</string>
+    <string name="help">Help</string>
+    <string name="checkout">Checkout</string>
+
 </resources>
