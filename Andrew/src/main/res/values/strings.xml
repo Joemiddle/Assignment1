@@ -37,5 +37,18 @@
     <string name="cvc">CVC</string>
     <string name="confirm">Confirm</string>
     <string name="title">Title</string>
+    <string name="on">ON</string>
+    <string name="qb">QB</string>
+    <string name="ab">AB</string>
+    <string name="sa">SA</string>
+    <string name="mr">Mr.</string>
+    <string name="ms">Ms.</string>
+    <string name="doc">Doc</string>
+    <string name="notitle">---</string>
+    <string name="entername">Please enter your name</string>
+    <string name="entercity">Please enter your city</string>
+    <string name="enternum">Please enter your card number</string>
+    <string name="entercvc">Please enter your cvc number on the back of your credit card</string>
+    <string name="finalO">Your order has been entered</string>
 
 </resources>

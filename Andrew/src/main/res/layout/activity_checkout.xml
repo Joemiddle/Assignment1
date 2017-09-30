@@ -28,11 +28,20 @@
         android:prompt="@string/title"
         >
     </Spinner>
+
     <EditText
         android:id="@+id/clientname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/clientname"/>
+
+            <Spinner
+                android:id="@+id/province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/title"
+                >
+            </Spinner>
 
     <EditText
         android:id="@+id/city"
@@ -43,16 +52,20 @@
 
     <EditText
         android:id="@+id/cardnumber"
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/creditcard"
+        android:layout_gravity="center"
         android:maxLength="16"/>
 
     <EditText
         android:id="@+id/cvc"
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLength="3"
+        android:layout_gravity="center"
         android:hint="@string/cvc"/>
 
     <Button

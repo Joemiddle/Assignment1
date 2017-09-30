@@ -132,7 +132,7 @@ public class CustomActivity extends AppCompatActivity {
                         break;
                 }
 
-
+                myIntent.putExtra("activity","order");
                 startActivity(myIntent);
 
             }
@@ -155,6 +155,7 @@ public class CustomActivity extends AppCompatActivity {
         {
             case R.id.Home:
                 myIntent = new Intent(CustomActivity.this,AndrewActivity.class);
+                myIntent.putExtra("activity","not order");
                 startActivity(myIntent);
                 break;
 

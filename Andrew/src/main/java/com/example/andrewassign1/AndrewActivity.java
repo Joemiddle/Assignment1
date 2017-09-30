@@ -30,6 +30,7 @@ public class AndrewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_andrew);
+        // Item array is only 5 because most people don't order much more than that, plus the order is going to need to fit into the layout
         items = new Item[5];
         count = 0;
 
@@ -40,6 +41,8 @@ public class AndrewActivity extends AppCompatActivity {
         drinks=(Button)findViewById(R.id.drinksButton);
         finalorder = (Button) findViewById(R.id.final_order);
 
+
+        //Adding all the button funcitonality
         regular.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -153,7 +156,7 @@ public class AndrewActivity extends AppCompatActivity {
     }
 
 
-
+    // onResume is for when the app gets back to this activity and so it can add a new item to the order
     @Override
     protected void onResume()
     {
@@ -163,14 +166,19 @@ public class AndrewActivity extends AppCompatActivity {
 
 
                 Intent intent = getIntent();
-                String size = intent.getStringExtra("size");
-                double cost = intent.getDoubleExtra("cost", 0);
-                String top1 = intent.getStringExtra("top1");
-                String top2 = intent.getStringExtra("top2");
-                Pizza pizza = new Pizza(getResources().getString(R.string.regular), cost, top1, top2, size);
-                items[count] = pizza;
-                count++;
-                Toast.makeText(AndrewActivity.this, items[count - 1].getItemName() + " " + getString(R.string.ordered), Toast.LENGTH_LONG).show();
+
+                // need to make sure program came from a new order and not anywhere else
+                if(intent.getStringExtra("activity").compareTo("order") == 0)
+                {
+                    String size = intent.getStringExtra("size");
+                    double cost = intent.getDoubleExtra("cost", 0);
+                    String top1 = intent.getStringExtra("top1");
+                    String top2 = intent.getStringExtra("top2");
+                    Pizza pizza = new Pizza(getResources().getString(R.string.regular), cost, top1, top2, size);
+                    items[count] = pizza;
+                    count++;
+                    Toast.makeText(AndrewActivity.this, items[count - 1].getItemName() + " " + getString(R.string.ordered), Toast.LENGTH_LONG).show();
+                }
             }
             else
             {
@@ -191,6 +199,7 @@ public class AndrewActivity extends AppCompatActivity {
         {
             case R.id.Home:
                 myIntent = new Intent(AndrewActivity.this,AndrewActivity.class);
+                myIntent.putExtra("activity","not order");
                 startActivity(myIntent);
                 break;
 
@@ -213,3 +222,5 @@ public class AndrewActivity extends AppCompatActivity {
     }
 
 }
+
+

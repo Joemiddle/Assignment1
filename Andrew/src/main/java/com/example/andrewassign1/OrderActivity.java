@@ -1,6 +1,7 @@
 package com.example.andrewassign1;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Parcelable;
@@ -17,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.R.attr.x;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -36,7 +39,9 @@ public class OrderActivity extends AppCompatActivity {
         items = new Item[5];
         items =(Item[]) intent.getSerializableExtra("items");
 
-        LinearLayout layout = (LinearLayout)findViewById(R.id.items);
+        Context context = this.getApplicationContext();
+
+        LinearLayout layout = (LinearLayout)findViewById(R.id.checkout);
 
         TextView newText;
         Button delete;
@@ -58,6 +63,15 @@ public class OrderActivity extends AppCompatActivity {
                     }
                 });
             }
+            int total = 0;
+            for(int x=0;x<count;x++)
+            {
+                total += items[x].getCost();
+            }
+                TextView tv = new TextView(context);
+                tv.setText(total);
+                layout.addView(tv);
+
         }catch(Exception e)
             {
                 Log.d("d", "Deleted only element");
@@ -70,6 +84,7 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent myIntent = new Intent(OrderActivity.this,AndrewActivity.class);
                 myIntent = new Intent(OrderActivity.this,CheckoutActivity.class);
+                myIntent.putExtra("activity","not order");
                 startActivity(myIntent);
             }
         });
@@ -91,6 +106,7 @@ public class OrderActivity extends AppCompatActivity {
         {
             case R.id.Home:
                 myIntent = new Intent(OrderActivity.this,AndrewActivity.class);
+                myIntent.putExtra("activity","not order");
                 startActivity(myIntent);
                 break;
 
