@@ -63,6 +63,17 @@ public class OrderActivity extends AppCompatActivity {
                 Log.d("d", "Deleted only element");
             }
 
+
+        Button checkout = (Button) findViewById(R.id.checkout);
+
+        checkout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent myIntent = new Intent(OrderActivity.this,AndrewActivity.class);
+                myIntent = new Intent(OrderActivity.this,CheckoutActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
 
     // Populating Menu
