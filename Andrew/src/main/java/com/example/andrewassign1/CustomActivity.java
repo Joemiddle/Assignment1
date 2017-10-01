@@ -1,3 +1,4 @@
+// Andrew McGuire n01121995 Assignment 1
 package com.example.andrewassign1;
 
 import android.content.Context;

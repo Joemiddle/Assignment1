@@ -1,3 +1,4 @@
+// Andrew McGuire n01121995 Assignment 1
 package com.example.andrewassign1;
 
 import android.app.ActionBar;
@@ -41,43 +42,43 @@ public class OrderActivity extends AppCompatActivity {
 
         Context context = this.getApplicationContext();
 
-        LinearLayout layout = (LinearLayout)findViewById(R.id.checkout);
-
-        TextView newText;
-        Button delete;
-
-        try {
-            for (int x = 0; x < count; x++) {
-
-                LinearLayoutCompat.LayoutParams params = new LinearLayoutCompat.LayoutParams(
-                        ActionBar.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-                newText = new TextView(getApplicationContext());
-                newText.setLayoutParams(params);
-                newText.setText(items[x].getItemName());
-                delete = new Button(getApplicationContext());
-
-                delete.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        items[count] = items[items.length];
-                    }
-                });
-            }
-            int total = 0;
-            for(int x=0;x<count;x++)
-            {
-                total += items[x].getCost();
-            }
-                TextView tv = new TextView(context);
-                tv.setText(total);
-                layout.addView(tv);
-
-        }catch(Exception e)
-            {
-                Log.d("d", "Deleted only element");
-            }
-
-
+//        LinearLayout layout = (LinearLayout)findViewById(R.id.items);
+//
+//        TextView newText;
+//        Button delete;
+//
+//        try {
+//            for (int x = 0; x < count; x++) {
+//
+//                LinearLayoutCompat.LayoutParams params = new LinearLayoutCompat.LayoutParams(
+//                        ActionBar.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//
+//                newText = new TextView(getApplicationContext());
+//                newText.setLayoutParams(params);
+//                newText.setText(items[x].getItemName());
+//                delete = new Button(getApplicationContext());
+//
+//                delete.setOnClickListener(new View.OnClickListener() {
+//                    public void onClick(View v) {
+//                        items[count] = items[items.length];
+//                    }
+//                });
+//            }
+//            int total = 0;
+//            for(int x=0;x<count;x++)
+//            {
+//                total += items[x].getCost();
+//            }
+//                TextView tv = new TextView(context);
+//                tv.setText(total);
+//                layout.addView(tv);
+//
+//        }catch(Exception e)
+//            {
+//                Log.d("d", "Deleted only element");
+//            }
+//
+//
         Button checkout = (Button) findViewById(R.id.checkout);
 
         checkout.setOnClickListener(new View.OnClickListener(){
